@@ -39,4 +39,4 @@ WORKDIR /home/chrome
 EXPOSE 9515
 
 ENTRYPOINT [ "chromedriver" ]
-CMD [ "--whitelisted-ips" ]
+CMD [ "--whitelisted-ips" , "--verbose" ]
