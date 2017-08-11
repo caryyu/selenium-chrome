@@ -19,7 +19,8 @@ USER chrome
 
 EXPOSE 9515
 
-ENTRYPOINT [ "google-chrome-stable","--headless","--disable-gpu","--remote-debugging-address=0.0.0.0",
-"--remote-debugging-port=9222","&&","chromedriver"]
+ENTRYPOINT [ "google-chrome-stable"]
 
-CMD [ "--whitelisted-ips" ]
+CMD ["--headless","--disable-gpu","--remote-debugging-address=0.0.0.0","--remote-debugging-port=9222"]
+
+#CMD [ "--whitelisted-ips" ]
