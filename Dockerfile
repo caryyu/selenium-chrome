@@ -7,7 +7,7 @@ LABEL name="selenium-chrome" \
 
 USER root
 
-WORKDIR /home/chrome
+#WORKDIR /home/chrome
 
 RUN apt-get update && \
     apt-get install -y unzip && \
@@ -17,10 +17,11 @@ RUN apt-get update && \
 
 USER chrome
 
+EXPOSE 9222
 EXPOSE 9515
 
-ENTRYPOINT [ "google-chrome-stable"]
+ENTRYPOINT [ "google-chrome-stable" ]
 
-CMD ["--headless","--disable-gpu","--remote-debugging-address=0.0.0.0","--remote-debugging-port=9222"]
+CMD [ "--headless", "--disable-gpu", "--remote-debugging-address=0.0.0.0", "--remote-debugging-port=9222" ]
 
 #CMD [ "--whitelisted-ips" ]
