@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
 # Chrome Driver
 RUN apt-get update && \
     apt-get install -y unzip && \
-    wget https://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip && \
+    wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip && \
     unzip chromedriver_linux64.zip && \
     mv chromedriver /usr/bin && rm -f chromedriver_linux64.zip
 
